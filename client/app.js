@@ -21,19 +21,18 @@ async function getMessages() {
   const response = await fetch("http://localhost:8080/messages");
   const messages = await response.json();
 
-  messages.forEach(function (msg) {
+  messages.forEach(function (message) {
     const h3 = document.createElement("h3");
     const p = document.createElement("p");
 
-    h3.textContent = msg.username;
-    p.textContent = msg.messageContent;
+    h3.textContent = message.username;
+    p.textContent = message.messageContent;
 
     const messageContainer = document.getElementById("messageContainer");
 
     messageContainer.appendChild(h3);
     messageContainer.appendChild(p);
   });
-  // profit?
 }
 
 getMessages();
