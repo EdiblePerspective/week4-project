@@ -1,3 +1,5 @@
+import Database from "better-sqlite3";
+const db = new Database("messages.db");
 //boiler plate in server.js
 import express from "express";
 import cors from "cors";

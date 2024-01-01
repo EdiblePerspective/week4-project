@@ -10,7 +10,7 @@ form.addEventListener("submit", async function (event) {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(formValues),
+   body: JSON.stringify(formValues),
   });
   const json = await response.json();
 
